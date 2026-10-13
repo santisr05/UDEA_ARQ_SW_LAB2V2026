@@ -110,4 +110,5 @@ jobs:
           #Set artifact name
           name: artifact
           #From this path
-          path: target/lab2v2026-0.0.1-SNAPSHOT.jar
+          path: target/*.jar
+          if-no-files-found: error
