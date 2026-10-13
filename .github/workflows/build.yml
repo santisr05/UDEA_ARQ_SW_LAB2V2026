@@ -110,5 +110,15 @@ jobs:
           #Set artifact name
           name: artifact
           #From this path
-          path: target/*.jar
+          path: target/UDEA_ARQ_SW_LAB2V2026.jar
           if-no-files-found: error
+
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: santisr05/udea_arq_sw_lab2v2026
+          tags: latest
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}

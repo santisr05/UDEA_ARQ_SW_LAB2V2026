@@ -86,6 +86,9 @@
 			</plugin>
 
 		</plugins>
+
+		<finalName>UDEA_ARQ_SW_LAB2V2026</finalName>
+
 	</build>
 
 </project>
